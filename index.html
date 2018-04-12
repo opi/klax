@@ -16,19 +16,16 @@
         ou mieux, <a href="https://www.torproject.org/download/download-easy.html.en">Tor Browser</a>.
     </p>
 
-    <audio id="video" controls loop autoplay width="640" 
-        data-playlist="https://opi.github.io/klax/klax.m3u">
-    </audio>
+    <audio id="audio" controls loop autoplay data-playlist="https://opi.github.io/klax/klax.m3u"></audio>
 
     <p>
-    <button id="video-next-source">Next source</button>
-    <button id="video-randomize-source">Random source</button>
+        <button id="audio-next-source">Changer de mirroir</button>
+        <button id="audio-randomize-source">Mirroir au hasard</button>
     </p>
 
     <p>
     <strong>Playlist&nbsp;:</strong> <a href="https://grenoble.indymedia.org/radio_klaxon.m3u">
-    https://grenoble.indymedia.org/radio_klaxon.m3u
-</a></li>
+    https://grenoble.indymedia.org/radio_klaxon.m3u</a>
     </p>
 
     <p>
@@ -37,16 +34,16 @@
     </p>
 
     <script src="m3uStreamPlayer.js"></script>
-    <script>m3uStreamPlayer.init({selector: '#video', debug: true});</script>
+    <script>m3uStreamPlayer.init({selector: '#audio', debug: true});</script>
     <script>
 
       /**
        * Buttons
        */
-      var buttonNextSource = document.querySelector('#video-next-source');
-      var buttonRandomizeSource = document.querySelector('#video-randomize-source');
-      buttonNextSource.addEventListener('click', function(){ m3uStreamPlayer.nextSource(document.querySelector('#video')); })
-      buttonRandomizeSource.addEventListener('click', function(){ v.randomizeSource(document.querySelector('#video')); })
+      var buttonNextSource = document.querySelector('#audio-next-source');
+      var buttonRandomizeSource = document.querySelector('#audio-randomize-source');
+      buttonNextSource.addEventListener('click', function(){ m3uStreamPlayer.nextSource(document.querySelector('#audio')); })
+      buttonRandomizeSource.addEventListener('click', function(){ m3uStreamPlayer.randomizeSource(document.querySelector('#audio')); })
 
     </script>
   </body>
