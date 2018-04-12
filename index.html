@@ -2,32 +2,17 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>FAImaison - CloudFrancois</title>
+    <title>Klax</title>
     <meta name="description" content="">
     <style>
-      /* Responsive video */
-      video { 
-        max-width: 100%;
-        height: auto;
-      }
-
-      /* faimaison style */
-      body {
-        background: #37455b;
-        color: #cedbf0;
-      }
-      h1, a {
-        color: #b4d931;
-      }
-      video {
-        border: 1px solid #485a74;
-      }
     </style>
   </head>
   <body>
 
-    <h1>FAImaison</h1>
-    <video id="video"controls loop autoplay width="640" data-playlist="http://live.cloudfrancois.fr/playlist/faimaison"></video>
+    <h1>Klax</h1>
+    <audio id="video" controls loop autoplay width="640" 
+        data-playlist="./radio_klaxon.m3u">
+    </audio>
 
     <p>
     <button id="video-next-source">Next source</button>
@@ -35,7 +20,9 @@
     </p>
 
     <p>
-    <strong>Playlist&nbsp;:</strong> <a href="http://live.cloudfrancois.fr/playlist/faimaison">http://live.cloudfrancois.fr/playlist/faimaison</a></li>
+    <strong>Playlist&nbsp;:</strong> <a href="https://grenoble.indymedia.org/radio_klaxon.m3u">
+    https://grenoble.indymedia.org/radio_klaxon.m3u
+</a></li>
     </p>
 
     <script src="m3uStreamPlayer.js"></script>

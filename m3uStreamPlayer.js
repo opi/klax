@@ -26,6 +26,7 @@
         elem.sources = xhr.responseText.match(/^(?!#)(?!\s).*$/mg).filter(function(element){return (element);});
         if (exports.debug) console.log("Sources: "+elem.sources);
         // Load first source
+        console.log(elem.src);
         elem.src = elem.sources[0];
         // Play first source
         if (elem.getAttribute('autoplay')) elem.play();
